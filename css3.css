@@ -1,0 +1,402 @@
+@charset "utf-8";
+/* CSS Document*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{ 
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#header {
+    position: fixed;
+    height: 46px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    z-index: 1;
+    background: #000;
+}
+
+#header .login-form{
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 21px;
+}
+
+.login-form li a{
+    font-size: 20px;
+    line-height: 46px;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+.login-form li{
+    list-style-type: none;
+}
+
+.login{
+    color: white;
+}
+
+.login-form:hover{
+    display: block;
+    background: rgb(174, 190, 22);
+}
+
+.login:hover{
+    color: red;
+}
+
+.menu{
+    animation: doimau 10s infinite;
+}
+
+.menu > li{
+    display: inline-block;
+}
+
+.menu > li > a{
+    color: white; 
+    animation: DOIMAUCHU 4s infinite;
+} 
+
+.menu li a{
+    font-size: 20px;
+    padding: 0 24px;
+    line-height: 46px;
+    text-decoration: none; /* Xóa gạch của chọn link*/
+} 
+
+.menu li a:hover{  
+    display: block;
+    background: rgb(174, 190, 22);
+    color: red;
+} 
+
+
+#slider{
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url('./img/header.png') top center / cover no-repeat;/*căn giữa / không lập lại */ 
+    position: relative;
+}
+
+#slider .text-content{
+    position: absolute;
+    top: 47px;
+    color: #ccc;
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-heading{
+    font-size: 70px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 4px 5px red;
+    animation:  chude ease-in 2s infinite;/* gán ứng dụng màu muốn dùng đến*/
+    color: white;
+}
+
+.text{
+    font-size: 16px;
+    margin-top: 20px;
+    font-weight: bold;
+    text-shadow: 0 0 1px #000;
+    color: white;
+}
+@keyframes DOIMAUCHU{
+    50%{
+        color: white;
+    }
+    100%{
+        color:wheat;
+    }
+}
+
+
+@keyframes chude{ /* tao chuyển màu cho tên shop*/
+    from {
+        color: blanchedalmond;
+    }
+    to {
+        color: blueviolet;
+    } 
+}
+
+@keyframes login1{ /* tao chuyển màu cho tên shop*/
+    from {
+        color: yellow
+    }
+    to {
+        color: red
+    } 
+}
+/*Thiết Kế hàng bán giày*/
+/*----------------------------------*/
+/* Shoes */
+div.shoess{
+    display: flex; 
+}
+div.shoes{
+    border: 2px solid red;
+    text-align: center;
+    border-radius: 10px;
+    margin: 1%;
+    width: 25%;
+    cursor: pointer;/*khi chạm vảo ảnh nó sẽ đổi thành dạng con trỏ*/
+}
+div.shoes > img{
+    width: 250px;
+    padding: 20px; 
+    transition: transform .5s;/*khi thực hiện hình sẽ to lên từ từ trong vào 2 giấy */
+}
+div.shoes > img:hover{
+    transform: scale(1.1 );/* khi thực hiện thì lựa chọn sẽ được lo lên*/
+}
+/*Thiết kế hàng áo đấu*/
+/*------------------------*/
+/*tshirt*/
+div.tshirtt{
+    display: flex;
+}
+div.tshirt{
+    border: 2px solid black;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    margin: 1%;
+    width: 25%;
+    cursor: pointer;
+}
+div.tshirt > img{
+    width: 250px;
+    padding: 20px; 
+    transition: transform 1s;/*gán giá trị và để nó thực hiện trong 1 giấy*/
+}
+div.tshirt > img:hover{
+    transform: skewX(-5deg); /* khi trỏ chuột vào lựa chọn sẽ nghiên theo chiều ngang là X, muốn theo chiều dọc ta đổi thành Y */
+}
+/* Thiết kế hàng bán bóng rổ*/
+/*----------------------------------*/
+/*ball*/
+div.Balls{
+    display: flex;
+}
+div.Ball{
+    border: 2px solid blueviolet;
+    text-align: center;
+    border-radius: 10px;
+    margin: 1%;
+    width: 25%;
+    cursor: pointer;
+}
+
+div.Ball > img{
+    width: 250px;
+    padding: 20px; 
+    transition: transform 1s ;/* gán vào hình và muốn khi trỏ chuột đến nó sẽ thực hiện trong bao nhiêu giây */
+}
+
+div.Ball > img:hover{ /* khi trỏ chuột vào lựa chọn sẽ nghiên về bên phải, nếu muốn nghiêng về bên trái cần đổi dâu */
+    transform: skew(5deg);
+}
+/* khi tên mà gán backgroud ở cuối bài */
+/*---------------------------------/*
+/*Footer*/
+#footer{
+    padding: 64px 16px;
+    text-align: center;
+    /* background: -webkit-linear-gradient(left top, #5aaddd , #eb4947);  */
+    background-image: url('https://mdn.mozillademos.org/files/11307/bubbles.png'),linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+    /* background-repeat: no-repeat, no-repeat, no-repeat; */
+    background-position: bottom right, left, right;
+    background: -moz-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -webkit-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), -ms-linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0)), linear-gradient(to right, rgba(30, 75, 115, 1), rgba(255, 255, 255, 0));
+}
+
+#footer .contact{
+    font-size: 15px;
+    margin-top: 15px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#footer li{
+    list-style-type: none;
+    color:#000;
+    font-weight: bold;
+}
+
+#footer .list-itep{
+    font-size: 24px;
+}
+
+#footer .list-itep a{
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+#footer .list-itep a:hover {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.list-ground{
+    float: left;
+    top:0;
+    padding: 0 21px;
+    line-height: 30px;
+    font-size: 15px;
+    margin-top: -165px;
+    color: white;
+}
+
+.list-ground li{
+    list-style-type: none;
+}
+
+h1.one{ /* thiết kế mục cho sản phẩm*/
+    font-size: 35px;
+    color: white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 20px 20px 0 0;
+    width: 25%;
+    margin-bottom: 0;
+    padding-right: 5px;
+}
+div.line{
+    width: 100%;
+    height: 5px;
+    background-color: black;
+}
+div h3,h4{
+    text-align: center;
+}
+
+/* begin login */
+#wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+}
+
+.ti-close{
+    float: right;
+    color: #fff;
+    font-size: 15px;
+    margin-top: -20px;
+    margin-right: -20px;
+    opacity: 0.7;
+}
+
+.ti-close:hover{
+    cursor: pointer;
+    color: rgb(255, 0, 85);
+}
+
+#form-login{
+    max-width: 500px;
+    background: rgba(0, 0, 0, 0.8);
+    flex-grow: 1;
+    padding: 30px 30px 40px;
+    box-shadow: 0px 0px 17px 2px rgba(255, 255, 255, 0.8);
+}
+
+.form-heading
+{
+    font-size: 20px;
+    color: #ccc;
+    text-align: center;
+    margin-bottom: 30px;
+    animation:  login1 ease-in 2s infinite;
+}
+
+.form-group{
+    border-bottom: 1px solid #ccc;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.form-group i{
+    color: #fff;
+    font-size: 14px;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+
+.form-input{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    color: #ccc;
+    flex-grow: 1;
+}
+
+.form-input::placeholder{
+    color: #ccc;
+}
+
+#eye {
+    float: right;
+    cursor: pointer;
+}
+
+
+.Forgot-password{
+    float: right;
+    color:black;
+    opacity: 0.7;
+}
+
+.Forgot-password li{
+    list-style-type: none;
+}
+
+.form-submit{
+    background: transparent;
+    border: 1px solid #ccc;
+    color: #151414;
+    width: 100%;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    transition: 0.25s ease-in-out;
+    margin-top: 30px;
+}
+
+.form-submit:hover{
+    border: 1px solid #54a0ff;
+    color: yellowgreen;
+    cursor: pointer;
+}
+
+/* đăng ký */
+#registration{
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    display: inline-flex;
+}
+
+.regin{
+    font-size: 20px;
+    color:white;
+}
+
+.regin:hover{
+    cursor: pointer;
+    color: rgb(28, 24, 24);
+}
